@@ -20,6 +20,7 @@ button{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .esquerda{
@@ -36,7 +37,7 @@ button{
     font-family: "Rubik Moonrocks", sans-serif;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 10px 0;
     margin-left: 50px;
 }
 
@@ -87,4 +88,58 @@ button{
     color: white;
     border-radius: 15px;
     width: 100px;
+}
+
+.pagina{
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: gray;
+    height: 100%;
+    width: 100%;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    height: 50px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto-branco{
+    color: white;
+}
+
+.footer .endereco{
+    display: flex;
+    margin-left: 0;
+    width: 30%;
+}
+
+.footer .email{
+    display: flex;
+    margin-left: 0;
+    width: 30%;
+}
+
+.footer .redes{
+    display: flex;
+    margin-right: 50px;
+    gap: 10px;
+}
+
+.footer .redes button{
+    background-color: transparent;
+    border: transparent;
+}
+
+.footer .redes img{
+    width: 20px;
+    height: 20px;
 }

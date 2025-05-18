@@ -1,7 +1,7 @@
 body{
     font-size: 14px;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -48,6 +48,7 @@ button{
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 10px;
+    font-size: 18px;
 }
 
 .atalhos button{
@@ -91,12 +92,189 @@ button{
 }
 
 .pagina{
+    display: flex;
     padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    background-color: gray;
+    padding-bottom: 50px ;
+    background-color: transparent;
     height: 100%;
     width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.anuncio{
+    display: flex;
+    margin-top: 20px ;
+    height: 400px;
+    width: 100%;
+    background-color: transparent;
+    flex-direction: row;
+}
+
+.anuncio .textos{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.anuncio .textos .logo{
+    margin-left: 0;
+}
+
+.anuncio .textos .logo .graus10{
+    transform: rotate(-10deg);
+}
+
+.anuncio .textos .info{
+    font-size: 30px;
+}
+
+.anuncio .textos .sub-info{
+    font-size: 15px;
+}
+
+.anuncio .textos .botoes-anuncio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.anuncio .textos .botoes-anuncio button{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    height: 35px;
+    align-items: center;
+    border-radius: 15px;
+    color: white;
+}
+
+.laranja{
+    border: 1px solid #FE3D00;
+    background-color: #FE3D00;
+}
+
+.preto{
+    background-color: #1E1E1E;
+    border: 1px solid #1E1E1E;
+}
+
+.anuncio .imagem{
+    flex: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+.menu .titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FE3D00;
+    font-size: 20px;
+    font-family: "Rubik Moonrocks", sans-serif;
+}
+
+.menu .sub-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 13px;
+    font-family: "Rubik Moonrocks", sans-serif;
+}
+
+.menu .opcoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.menu .opcoes .pizzas{
+    background-color: #D9D9D9;
+    width: 30%;
+    height: 400px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+
+}
+
+.menu .opcoes .pizzas .pizza-imagem{
+    display: flex;
+    justify-content: center;
+    height: 40%;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.menu .opcoes .pizzas .pizza-imagem img{
+    height: 100%;
+}
+
+.menu .opcoes .pizzas .pizza-titulo{
+    font-size: 20px;
+    font-weight: bold;
+    height: 10%;
+    font-family: "Rubik Moonrocks", sans-serif;
+}
+
+.menu .opcoes .pizzas .pizza-descricao{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    font-family: "Rubik Moonrocks", sans-serif;
+    height: 30%;
+}
+
+
+.menu .opcoes .pizzas .pizza-titulo{
+    font-size: 15px;
+    font-family: "Rubik Moonrocks", sans-serif;
+}
+
+.menu .opcoes .pizzas .pizza-botao{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+.menu .opcoes .pizzas .pizza-botao button{
+    width: 80%;
+    height: 35px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .opcoes .pizzas .pizza-botao button img{
+    width: 25px;
+    filter: invert(1)
 }
 
 .footer{
@@ -143,3 +321,38 @@ button{
     width: 20px;
     height: 20px;
 }
+
+.hidden-pc{
+    display: none;
+}
+
+@media (max-width: 900px) {
+
+    .header .esquerda .logo{
+        margin-left: 10px;
+    }
+    
+    .header .esquerda .atalhos{
+        display: none;
+    }
+    
+    .header .direita .botoes{
+        width: 100%;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .header .direita .login{
+        display: none;
+    }
+
+    .hidden-pc{
+        display: block;
+    }
+
+    .menu-lateral{
+        height: 30px;
+        width: 30px;
+    }
+}
+

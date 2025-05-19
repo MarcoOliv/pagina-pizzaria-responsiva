@@ -27,7 +27,7 @@
         </div>
         <div class="direita">
             <div class="botoes">
-                <button type="button" class="carrinho" onclick="abrirCarrinho()"><img src="assets/img/svg_shoppingCart.png.png"></button>
+                <button type="button" class="carrinho" onclick="abrirCarrinho()"><img src="assets/img/svg_shoppingCart.png.png"><span id="contador-carrinho">0</span></button>
                 <button type="button" class="buscar" onclick="buscarProduto()"><img src="assets/img/svg_search.png.png"></button>
                 <button type="button" class="hidden-pc" onclick="abrirMenu()"><img src="assets/img/menu-svgrepo-com.png" class="hidden-pc menu-lateral"></button>
             </div>
@@ -51,15 +51,15 @@
                     Com vontade de algo delicioso? A pizza perfeita está a apenas um clique de distância.
                 </div>
                 <div class="botoes-anuncio">
-                    <button type="button" class="laranja">PEÇA AGORA <img src="assets/img/svg_ArrowRight.png.png"></button>
-                    <button type="button" class="preto">VER MENU <img src="assets/img/svg_ArrowRight.png.png"></button>
+                    <button type="button" onclick="pedirAgora()" class="laranja">PEÇA AGORA <img src="assets/img/svg_ArrowRight.png.png"></button>
+                    <button type="button" onclick="rolarMenu()" class="preto">VER MENU <img src="assets/img/svg_ArrowRight.png.png"></button>
                 </div>
             </div>
             <div class="imagem">
                 <img src="assets/img/showcase_pizza.png.png">
             </div>
         </div>
-        <div class="menu">
+        <div class="menu" id="menu">
             <div class="titulo">
                 Menu
             </div>
@@ -78,7 +78,7 @@
                         Massa crocante coberta com molho de tomate, mussarela derretida e fatias generosas de pepperoni levemente picante.
                     </div>
                     <div class="pizza-botao">
-                        <button type="button" class="laranja"><img src="assets/img/svg_shoppingCart.png.png"></button>
+                        <button type="button" class="laranja" onclick="adicionarAoCarrinho('Pepperoni Clássica')"><img src="assets/img/svg_shoppingCart.png.png"></button>
                     </div>
                 </div>
                 <div class="pizzas pizza-2">
@@ -92,7 +92,7 @@
                         Combinação cremosa de frango desfiado temperado e sabor suave do catupiry sobre uma massa macia e dourada.
                     </div>
                     <div class="pizza-botao">
-                        <button type="button" class="laranja"><img src="assets/img/svg_shoppingCart.png.png"></button>
+                        <button type="button" class="laranja" onclick="adicionarAoCarrinho('Frango com Catupiry')"><img src="assets/img/svg_shoppingCart.png.png"></button>
                     </div>
                 </div>
                 <div class="pizzas pizza-3">
@@ -106,7 +106,7 @@
                         Uma mistura deliciosa de calabresa, presunto, cebola, pimentão e azeitonas sobre mussarela e molho especial.
                     </div>
                     <div class="pizza-botao">
-                        <button type="button" class="laranja"><img src="assets/img/svg_shoppingCart.png.png"></button>
+                        <button type="button" class="laranja" onclick="adicionarAoCarrinho('A Moda da Casa')"><img src="assets/img/svg_shoppingCart.png.png"></button>
                     </div>
                 </div>
             </div>
